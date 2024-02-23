@@ -1,5 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 
+const navLinks = [
+  { path: '/', text: 'About Me' },
+  { path: '/Portfolio', text: 'Portfolio' },
+  { path: '/Contact', text: 'Contact' },
+  { path: '/Resume', text: 'Resume' }
+];
+
 export default function NavTabs() {
   const currentPage = useLocation().pathname;
 
@@ -12,18 +19,13 @@ export default function NavTabs() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="nav nav-tabs">
-            <li className="nav-item">
-              <Link to="/" className={currentPage === '/' ? 'nav-link active' : 'nav-link'}>About Me</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}>Portfolio</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/Contact" className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}>Contact</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/Resume" className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}>Resume</Link>
-            </li>
+            {navLinks.map((link, index) => (
+              <li key={index} className="nav-item">
+                <Link to={link.path} className={`nav-link ${currentPage === link.path ? 'active' : ''}`}>
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
