@@ -1,4 +1,4 @@
-# Dev_Blog
+# Vite_Blog
 
 ## Description
 This is a single-page application portfolio for a web developer built using Vite. It showcases the my personal projects, contact information, and resume.
@@ -30,7 +30,7 @@ If you have any questions, please feel free to reach out:
 - Email: sara.hizar@outlook.com
 
 ## Link
-https://github.com/sarahizar/Dev_Blog
+https://github.com/sarahizar/viteblog
 
 ## Screenshot
 ![My Image](dev.port.png)
